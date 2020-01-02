@@ -70,6 +70,11 @@ RCT_EXPORT_METHOD(requestAsync:(NSDictionary *)options
   [ctrl performRequests];
 }
 
+RCT_EXPORT_METHOD(setButtonType:(ASAuthorizationAppleIDButtonType)buttonType) {
+//+ (void)setButtonType:(ASAuthorizationAppleIDButtonType)buttonType {
+  AppleAuthentication.buttonType = buttonType;
+}
+
 
 - (ASPresentationAnchor)presentationAnchorForAuthorizationController:(ASAuthorizationController *)controller {
   return RCTKeyWindow();

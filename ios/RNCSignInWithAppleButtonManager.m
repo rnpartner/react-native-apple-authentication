@@ -10,11 +10,14 @@
 
 RCT_EXPORT_MODULE(RNCSignInWithAppleButtonManager)
 
+
 - (UIView *)view
 {
-  return [[RNCSignInWithAppleButton alloc] initWithAuthorizationButtonType:ASAuthorizationAppleIDButtonTypeDefault authorizationButtonStyle:ASAuthorizationAppleIDButtonStyleBlack];
+  return [[RNCSignInWithAppleButton alloc] initWithAuthorizationButtonType:ASAuthorizationAppleIDButtonStyleWhite authorizationButtonStyle:ASAuthorizationAppleIDButtonStyleWhiteOutline];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(onPress, RCTBubblingEventBlock)
+
+RCT_EXPORT_VIEW_PROPERTY(cornerRadius,CGFloat)
 
 @end
